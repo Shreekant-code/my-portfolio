@@ -10,7 +10,7 @@ export const Contact=()=>{
                 <label htmlFor="naam">Name</label>
                 <input type="text" placeholder="Enter Your Name" required />
                 <label htmlFor="phone-No">Phone Number</label>
-                <input type="tel" maxLength="10" pattern="\d{10}" inputMode="numeric" placeholder="Enter 10-digit number" />
+                <input type="tel" maxLength="10" pattern="^[0-9]{10}$" inputMode="numeric" placeholder="Enter 10-digit number" />
 
                 <label htmlFor="Email">Email-Id</label>
                 <input type="email" placeholder="Enter your Email" required />
