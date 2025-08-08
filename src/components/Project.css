@@ -1,0 +1,133 @@
+.project-container{
+    min-height: auto;
+    background-color: black;
+}
+.heading-part-project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.heading-part-project h1{
+    text-align: center;
+     font-size: 40px;
+  font-family: "Yesteryear", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(234, 13, 28);
+  text-shadow: 2px 2px 8px rgba(22, 6, 247, 0.941);
+  text-decoration: overline;
+  text-decoration-color: whitesmoke;
+ margin-top: 10px;
+}
+
+.project-icon{
+     color: white;
+    margin-right: 20px;
+    font-size: 40px;
+   background: #6b5acc;
+background: linear-gradient(90deg, rgba(107, 90, 204, 1) 0%, rgba(117, 13, 116, 1) 100%, rgba(121, 9, 115, 1) 72%);
+border-radius: 5px;
+padding: 5px;
+}
+
+.btnAll-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+}
+.btnAll-projects button {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative; 
+    background: none;
+    border: none;
+    padding: 10px 20px;
+}
+
+.btnAll-projects button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0%; 
+    height: 2px;
+    background-color: #0ff;
+    transition: width 0.4s ease;
+}
+
+.btnAll-projects button:hover::after,
+.btnAll-projects button.active::after {
+    width: 100%; 
+}
+
+.btnAll-projects button.active {
+    color: rgb(239, 47, 29); 
+}
+
+.projects-card{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    gap: 2px;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 480px){
+
+
+
+.btnAll-projects{
+   gap: 5px;
+    
+}
+.btnAll-projects button {
+   
+    font-size: 15px;
+   
+}
+
+
+
+.projects-card{
+
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    place-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    flex-direction: column;
+}
+}
+
+@media screen and (min-width: 481px) and (max-width: 830px){
+
+    
+.btnAll-projects{
+   gap: 5px;
+    
+}
+.btnAll-projects button {
+   
+    font-size: 15px;
+   
+}
+
+
+
+.projects-card{
+
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    place-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    flex-direction: column;
+}
+    
+}

@@ -1,0 +1,40 @@
+/* Loading Screen Container */
+.box-first {
+  background-color: #0d0d0d;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* More Dramatic Zoom with Overshoot */
+.zoom-in {
+  animation: zoomOvershoot 1.6s ease-in-out forwards;
+}
+
+@keyframes zoomOvershoot {
+  0% { transform: scale(0.6); opacity: 0; }
+  50% { transform: scale(1.15); opacity: 1; } /* Overshoot */
+  80% { transform: scale(0.95); } /* Slight shrink */
+  100% { transform: scale(1); opacity: 1; } /* Settle */
+}
+
+/* Loading text style */
+.loading-text {
+  margin-top: 20px;
+  font-size: 1.6rem;
+  font-family: monospace;
+  color: #00ff9d;
+  text-align: center;
+  animation: fadeUp 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+/* Text fade-in from bottom */
+@keyframes fadeUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}

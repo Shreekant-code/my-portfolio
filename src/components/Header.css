@@ -1,0 +1,261 @@
+.header-container {
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.35);          /* translucent black */
+  backdrop-filter: blur(10px);               /* blur background */
+  -webkit-backdrop-filter: blur(10px);       /* for Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+  padding: 0 2rem;
+}
+
+/* Add shadow and darken background on scroll */
+.header-container.scrolled {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  padding: 0 2rem;
+}
+
+
+
+
+.logo-container{
+    margin: 20px;
+}
+
+
+.logo-container .myLogo{
+ width: 120px;
+ height: 60px;
+   filter: drop-shadow(0.6rem 0.6rem 1rem rgba(20, 20, 180, 0.8));
+ 
+
+
+}
+ ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:20px;
+ }
+ nav{
+    margin-right: 50px;
+ }
+ul a{
+    color:white;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #0ff;
+  transition: width 0.4s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: rgb(239, 47, 29);
+}
+
+nav a:active {
+  color: rgb(239, 47, 29);
+}
+
+.menu-icon{
+    color: white;
+    font-size: 25px;
+    display: none;
+    margin-right: 10px;
+    
+}
+.cancel-icon{
+    color: white;
+    font-size: 25px;
+    margin-left: auto;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.cancel-icon:hover{
+    color: red;
+}
+
+@media screen and (max-width: 480px) {
+
+    .header-container{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+ nav {
+    display: none;
+  }
+
+ 
+
+
+ .mobile-view ul{
+display: flex;
+   align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    background-color: black;
+  
+   
+  transition: left 0.8s ease-in-out;
+  
+   
+ }
+ 
+ .mobile-view {
+  width: 200px;
+  height: 100vh;
+ position: absolute;
+ display: flex;
+  top: 80px;
+  right: -45px;
+  background-color: black;
+  z-index: 999; 
+padding: 20px;
+
+box-shadow: rgba(150, 151, 148, 0.56) 0px 22px 70px 4px;
+border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+ a{
+  text-align: center;
+  display: inline-block;
+ 
+ 
+  
+   }
+   li{
+    width: 100%;
+    color: white;
+   
+   }
+
+ 
+
+
+.menu-icon {
+  color: white;
+  font-size: 25px;
+  display: block;
+  cursor: pointer;
+ 
+  
+}
+
+
+
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 830px){
+ .header-container{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+ nav {
+    display: none;
+  }
+
+ 
+
+
+ .mobile-view ul{
+display: flex;
+   align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    background-color: black;
+   z-index: 999;
+   
+ }
+ 
+ .mobile-view {
+  width: 200px;
+  height: 100vh;
+ position: absolute;
+ display: flex;
+  top: 80px;
+  right: -45px;
+  background-color: black;
+  z-index: 999; 
+padding: 20px;
+
+box-shadow: rgba(150, 151, 148, 0.56) 0px 22px 70px 4px;
+border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+ a{
+  text-align: center;
+  display: inline-block;
+ 
+ 
+  
+   }
+   li{
+    width: 100%;
+    color: white;
+   
+   }
+
+ 
+
+
+.menu-icon {
+  color: white;
+  font-size: 25px;
+  display: block;
+  cursor: pointer;
+ 
+
+
+
+
+}
+}
+
+
