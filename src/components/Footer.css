@@ -1,0 +1,26 @@
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+ 
+
+}
+h3{
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-section a{
+    color: aqua;
+    text-decoration: none;
+
+}
+.footer-section p{
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+    
+    line-height: normal;
+}
