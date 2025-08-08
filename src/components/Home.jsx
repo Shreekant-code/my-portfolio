@@ -119,7 +119,7 @@ export const Home = () => {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="public/portpolio.png"
+            src="/portpolio.png"
             width="300"
             height="300"
             alt="Shreekant Yadav portrait"
