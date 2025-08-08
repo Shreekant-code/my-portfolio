@@ -84,7 +84,7 @@ export const Home = () => {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/shreekant"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
