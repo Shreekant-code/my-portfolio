@@ -5,13 +5,15 @@ import { IoMdMail } from "react-icons/io";
 import { CiLinkedin } from "react-icons/ci";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import Lottie from "lottie-react";
+import background from "../Animation/background.json"
 
 
 export const Home = () => {
   return (
     <section className="home-section">
       
-   
+   <Lottie  animationData={background} loop={true} className="bg"/>
       <motion.div
         className="availability-banner"
         initial={{ opacity: 0, y: -20 }}

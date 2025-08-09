@@ -3,9 +3,28 @@
   overflow: hidden;
   padding: 80px 20px;
   color: #fff;
+  min-height: calc(100vh - 100px);
 
 
 
+
+}
+
+.bg {
+  position: absolute;
+ 
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 0px 15px rgba(0, 255, 157, 0.3));
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.home-container,
+.availability-banner {
+  position: relative;
+  z-index: 999; 
 }
 
 .availability-banner {
@@ -68,11 +87,13 @@
   flex: 1;
   min-width: 300px;
   margin-bottom: 20px;
+  z-index: 998;
 }
 
 .description h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+   z-index: 998;
 }
 
 .highlight {
@@ -98,27 +119,24 @@
   font-weight: bold;
 }
 
+
 .social-links {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
-  margin-left: 50px;
-  width: 100%;
+  justify-content: flex-start; 
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+ margin-bottom: 10px;
 }
 
-.social-links a {
-  font-size: 1.8rem;
-  color: #fff;
-  transition: color 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-block;
+.social-links li a {
+  font-size: 30px; 
+  color: #333; 
+  transition: color 0.3s ease;
 }
 
-.social-links a:hover {
-  transform: translateY(-6px) scale(1.15);
-  color: #082cf5;
-  filter: drop-shadow(0 4px 4px rgba(141, 167, 191, 0.4));
+.social-links li a:hover {
+  color: #0073b1; 
 }
 
 .cta-buttons {
@@ -179,12 +197,7 @@
     font-size: 1rem;
   }
 
-  .social-links {
-    margin: 15px auto 25px;
-    gap: 12px;
-    margin-left: 0;
-    justify-content: center;
-  }
+ 
 
   .social-links a {
     font-size: 1.5rem;
@@ -209,10 +222,15 @@
   .description h2 {
     font-size: 0.9rem;
   }
-
+.cta-buttons {
+margin-left: 22px;
+ 
+}
   .social-links {
-    margin: 12px auto 20px;
-    gap: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
   }
 
   .social-links a {
@@ -232,6 +250,23 @@
   .availability-banner {
     padding: 4px 10px;
     top: 12px;
-    left: 35%;
+    left: 10px;
   }
-}
+
+
+   
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    opacity: 0.18;
+    filter: drop-shadow(0px 0px 6px rgba(0, 255, 157, 0.2));
+    transform: scale(1.05);
+    object-fit: cover; 
+  }
+  }
+
+
+
