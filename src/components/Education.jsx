@@ -1,6 +1,7 @@
 import "./Education.css";
 import { IoSchool } from "react-icons/io5";
 import { motion } from "framer-motion";
+const MotionDiv = motion.div;
 export const Education=()=>{
     return(
         <>
@@ -10,7 +11,7 @@ export const Education=()=>{
     <h1> Education</h1>
     </div>
     <div className="edu-container">
-    <motion.div className="box1"
+    <MotionDiv className="box1"
     initial={{ opacity: 0, x: 100}}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
@@ -23,9 +24,9 @@ export const Education=()=>{
         <h3>  <span>🏫</span> Thakur college of Engineering & Technology</h3>
         <p className="grade">CGPA: 9.45/10</p>
 
-  </motion.div>
+  </MotionDiv>
 
-      <motion.div className="box2"
+      <MotionDiv className="box2"
       initial={{ opacity: 0, x: -100}}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
@@ -38,9 +39,9 @@ export const Education=()=>{
         </div>
         <h3>  <span>🏫</span> K.J Somaiya college of science and commerce</h3>
 <p className="grade">Grade: 75.33%</p>
-</motion.div>
+</MotionDiv>
 
-      <motion.div className="box3"
+      <MotionDiv className="box3"
       initial={{ opacity: 0, x: 100}}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
@@ -54,7 +55,7 @@ export const Education=()=>{
         
 <p className="grade">Grade: 91.60%</p>
 
-    </motion.div>
+    </MotionDiv>
     </div>
 
 </section>

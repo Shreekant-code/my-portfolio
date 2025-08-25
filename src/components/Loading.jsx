@@ -2,12 +2,13 @@ import Lottie from "lottie-react";
 import Typewriter from "typewriter-effect";
 import animation from "../Animation/loading.json";
 import { motion } from "framer-motion";
+const MotionDiv = motion.div;
 import "../App.css";
 
 export const LoadingScreen = () => {
   return (
     <div className="box-first">
-      <motion.div
+      <MotionDiv
         className="animation-box"
         initial={{ scale: 0.5, rotateY: -90, opacity: 0 }}
         animate={{ scale: 1, rotateY: 0, opacity: 1 }}
@@ -24,7 +25,7 @@ export const LoadingScreen = () => {
       >
         <Lottie animationData={animation} loop={true} className="loading" />
 
-        <motion.div
+        <MotionDiv
           className="loading-text"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -43,8 +44,8 @@ export const LoadingScreen = () => {
               deleteSpeed: 15,
             }}
           />
-        </motion.div>
-      </motion.div>
+        </MotionDiv>
+      </MotionDiv>
     </div>
   );
 };

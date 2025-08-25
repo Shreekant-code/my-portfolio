@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { CiLinkedin } from "react-icons/ci";
 import { motion } from "framer-motion";
+const MotionDiv = motion.div;
 import { Typewriter } from "react-simple-typewriter";
 import Lottie from "lottie-react";
 import background from "../Animation/background.json"
@@ -14,7 +15,7 @@ export const Home = () => {
     <section className="home-section">
       
    <Lottie  animationData={background} loop={true} className="bg"/>
-      <motion.div
+      <MotionDiv
         className="availability-banner"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +24,7 @@ export const Home = () => {
       >
         <span className="dot"></span>
         Available for Work
-      </motion.div>
+      </MotionDiv>
 
       
      
@@ -34,7 +35,7 @@ export const Home = () => {
 
       <div className="home-container">
       
-        <motion.div
+        <MotionDiv
           className="description"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,10 +111,10 @@ export const Home = () => {
               Contact Me
             </a>
           </div>
-        </motion.div>
+        </MotionDiv>
 
         {/* RIGHT IMAGE */}
-        <motion.div
+        <MotionDiv
           className="img-container"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -127,7 +128,7 @@ export const Home = () => {
             alt="Shreekant Yadav portrait"
             loading="lazy"
           />
-        </motion.div>
+        </MotionDiv>
       </div>
     </section>
   );
