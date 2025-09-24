@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Fullstack } from "../projectcomponent/Fullstack";
 import"./Project.css"
 import { GrProjects } from "react-icons/gr";
+import { Mini } from "../projectcomponent/Mini";
 export const Project=()=>{
-    const[clicked,setclicked]=useState("fullstack");
+    const[clicked,setclicked]=useState("mini");
 
     const handlebtn=(input)=>{
         setclicked(input);
@@ -20,8 +21,8 @@ export const Project=()=>{
             </div>
 
             <div className="btnAll-projects">
-           <button className="advance-btn" onClick={()=>handlebtn("fullstack")}>Full-Stack Projects</button>
-           <button className="inter-btn" onClick={()=>handlebtn("mini")}>Intermediate Projects</button>
+           <button className="advance-btn" onClick={()=>handlebtn("fullstack")}>Full-Stack</button>
+           <button className="inter-btn" onClick={()=>handlebtn("mini")}>Intermediate </button>
            <button className="landing-btn" onClick={()=>handlebtn("landingPage")}>Landing Pages</button>
           
           </div>
@@ -31,8 +32,7 @@ export const Project=()=>{
 
           {clicked === "fullstack" && <Fullstack />}
 
-{clicked === "mini" && <h1 className="text-white center">Mini Projects coming soon</h1>}
-
+{clicked === "mini" && <Mini />}
 {clicked === "landingPage" && <h1 className="text-white">Landing Page Work in Progress</h1>}
 
 

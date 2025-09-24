@@ -1,35 +1,43 @@
-import React from "react";
-import { FaHtml5, FaJs, FaReact, FaCode } from "react-icons/fa";
-import { SiCsswizardry, SiRedux, SiPostman } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { FaReact, FaHtml5, FaJs, FaNodeJs,FaCode ,FaGithub} from "react-icons/fa";
 import { AiOutlineJava } from "react-icons/ai";
 import { VscVscode } from "react-icons/vsc";
+import { SiRedux, SiPostman, SiMongodb, SiExpress, SiVercel, SiRender,SiNetlify } from "react-icons/si";
+import { SiCsswizardry } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "./Skill.css";
-
-const techStack = [
+const techStack = [ 
   { logo: <FaHtml5 />, name: "HTML", color: "#E44D26" },
   { logo: <SiCsswizardry />, name: "CSS", color: "#1572B6" },
   { logo: <RiTailwindCssFill />, name: "Tailwind", color: "#06B6D4" },
   { logo: <FaJs />, name: "JavaScript", color: "#F7DF1E" },
-   { logo: <SiPostman />, name: "Postman", color: "#FFA500" },
-    { logo: <SiPostman />, name: "Postman", color: "#FFA500" },
-     { logo: <SiPostman />, name: "Postman", color: "#FFA500" },
+  { logo: <FaNodeJs />, name: "Node.js", color: "#339933" },
+  { logo: <SiExpress />, name: "Express", color: "#000000" },
+  { logo: <SiVercel />, name: "Vercel", color: "#000000" },
+   { logo: <SiNetlify />, name: "Netlify", color: "#00C7B7" },
 ];
-
 const downstack = [
   { logo: <FaReact />, name: "React", color: "#61DBFB" },
   { logo: <AiOutlineJava />, name: "Java", color: "#f89820" },
   { logo: <VscVscode />, name: "VS Code", color: "#007ACC" },
   { logo: <SiRedux />, name: "Redux", color: "#764ABC" },
   { logo: <SiPostman />, name: "Postman", color: "#FFA500" },
-   { logo: <SiPostman />, name: "Postman", color: "#FFA500" },
-    { logo: <SiPostman />, name: "Postman", color: "#FFA500" },
-     { logo: <SiPostman />, name: "Postman", color: "#FFA500" },
-];
+  { logo: <SiMongodb />, name: "MongoDB", color: "#47A248" },
+  { logo: <SiRender />, name: "Render", color: "#FF5C00"},
+   { logo: <FaGithub />, name: "GitHub", color: "#181717" },
+
+  ]
+
+
+
+
+
+
+
 
 const breakpoints = {
   320: { slidesPerView: 2, spaceBetween: 10 },
