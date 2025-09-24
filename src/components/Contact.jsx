@@ -7,7 +7,7 @@ export const Contact = () => {
 
   const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const TEMPLATE_ID_ADMIN = import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN_ID;
-  const TEMPLATE_ID_AUTOREPLY = import.meta.env.VITE_EMAILJS_TEMPLATE_AUTOREPLY_ID; // New template for auto-reply
+  const TEMPLATE_ID_AUTOREPLY = import.meta.env.VITE_EMAILJS_TEMPLATE_AUTOREPLY_ID;
   const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const sendEmail = async (e) => {
@@ -70,16 +70,16 @@ export const Contact = () => {
           />
           <button
             type="submit"
-            className="w-4/5 py-3 bg-cyan-500 text-white rounded-lg font-medium text-lg hover:bg-cyan-600 transition"
+            className="w-4/5 py-3 cursor-pointer bg-cyan-500 text-white rounded-lg font-medium text-lg hover:bg-cyan-600 transition"
           >
             Submit
           </button>
         </form>
       </div>
 
-      {/* Modal */}
+   
       {showModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20 z-20">
           <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
             <h2 className="text-xl font-bold mb-4 text-cyan-600">
               Thank You!
@@ -88,7 +88,7 @@ export const Contact = () => {
               Thanks for contacting me or sharing your ideas. I’ll get back to you soon!
             </p>
             <button
-              className="px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition"
+              className="px-6 py-2 cursor-pointer bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition"
               onClick={() => setShowModal(false)}
             >
               Close
