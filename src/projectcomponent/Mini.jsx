@@ -6,10 +6,11 @@ export const Mini = () => {
     <>
     
       {cardData.map((item) => (
-        <div
-          key={item.id}
-          className="bg-black rounded-md shadow-[0_9px_30px_rgba(255,149,5,0.3)] p-4 w-[330px] sm:w-[380px] md:w-[450px] flex flex-col"
-        >
+       <div
+  key={item.id}
+  className="bg-black rounded-md shadow-[0_9px_30px_rgba(255,149,5,0.3)] p-4 w-[330px] sm:w-[380px] md:w-[450px] flex flex-col
+             transition-transform transform hover:-translate-y-3 hover:scale-105 hover:shadow-xl duration-300"
+>
          
           <div className="flex justify-center items-center w-full">
            <img

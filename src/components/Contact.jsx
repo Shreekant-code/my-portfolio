@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 export const Contact = () => {
   const form = useRef();
@@ -12,14 +13,9 @@ export const Contact = () => {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-
     try {
-      
       await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID_ADMIN, form.current, PUBLIC_KEY);
-
-    
       await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID_AUTOREPLY, form.current, PUBLIC_KEY);
-
       form.current.reset();
       setShowModal(true); 
     } catch (error) {
@@ -28,13 +24,25 @@ export const Contact = () => {
     }
   };
 
+  // Bubble variations for creative effect
+  const bubbles = [
+    { cx: "10%", cy: "90%", r: 20, fill: "rgba(0, 255, 255, 0.15)", duration: 6, yRange: 20 },
+    { cx: "25%", cy: "85%", r: 15, fill: "rgba(255, 0, 255, 0.1)", duration: 8, yRange: 25 },
+    { cx: "40%", cy: "80%", r: 18, fill: "rgba(255, 255, 0, 0.2)", duration: 5, yRange: 15 },
+    { cx: "55%", cy: "92%", r: 22, fill: "rgba(0, 255, 0, 0.12)", duration: 7, yRange: 30 },
+    { cx: "70%", cy: "88%", r: 12, fill: "rgba(255, 165, 0, 0.18)", duration: 6, yRange: 18 },
+    { cx: "85%", cy: "95%", r: 25, fill: "rgba(0, 191, 255, 0.1)", duration: 9, yRange: 28 },
+    { cx: "50%", cy: "75%", r: 14, fill: "rgba(255, 20, 147, 0.15)", duration: 7, yRange: 20 },
+    { cx: "30%", cy: "92%", r: 10, fill: "rgba(124, 252, 0, 0.12)", duration: 5, yRange: 15 },
+  ];
+
   return (
-    <section className="w-full flex flex-col items-center justify-center bg-black py-12" id="contact">
+    <section className="w-full flex flex-col items-center justify-center bg-black relative py-16 overflow-hidden" id="contact">
       <h1 className="text-4xl text-red-600 font-[Yesteryear] text-center mb-6 overline overline-white">
         <span className="text-white">Contact </span> Me
       </h1>
 
-      <div className="w-[310px] sm:w-[400px] bg-black border border-gray-400 rounded-md shadow-[0_9px_30px_rgba(255,149,5,0.3)] p-2 mb-5">
+      <div className="w-[310px] sm:w-[400px] bg-black border border-gray-400 rounded-md shadow-[0_9px_30px_rgba(255,149,5,0.3)] p-4 mb-10 relative z-10">
         <h4 className="text-center text-blue-500 font-bold mb-4">
           Let’s Build Something Amazing Together!
         </h4>
@@ -77,7 +85,22 @@ export const Contact = () => {
         </form>
       </div>
 
-   
+      {/* Creative Floating Bubbles */}
+      <svg className="absolute top-0 left-0 w-full h-full z-0 overflow-visible">
+        {bubbles.map((bubble, index) => (
+          <motion.circle
+            key={index}
+            cx={bubble.cx}
+            cy={bubble.cy}
+            r={bubble.r}
+            fill={bubble.fill}
+            animate={{ y: [0, -bubble.yRange, 0] }}
+            transition={{ duration: bubble.duration, repeat: Infinity, ease: "easeInOut", delay: index * 0.5 }}
+          />
+        ))}
+      </svg>
+
+      {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20 z-20">
           <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
