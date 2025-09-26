@@ -1,7 +1,7 @@
 import { FaReact, FaHtml5, FaJs, FaNodeJs,FaCode ,FaGithub} from "react-icons/fa";
 import { AiOutlineJava } from "react-icons/ai";
 import { VscVscode } from "react-icons/vsc";
-import { SiRedux, SiPostman, SiMongodb, SiExpress, SiVercel, SiRender,SiNetlify } from "react-icons/si";
+import { SiRedux, SiPostman, SiMongodb, SiExpress, SiVercel, SiRender,SiNetlify ,SiVite} from "react-icons/si";
 import { SiCsswizardry } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
@@ -19,6 +19,8 @@ const techStack = [
   { logo: <SiExpress />, name: "Express", color: "#000000" },
   { logo: <SiVercel />, name: "Vercel", color: "#000000" },
    { logo: <SiNetlify />, name: "Netlify", color: "#00C7B7" },
+   { logo: <SiVite />, name: "Vite", color: "#646CFF" }
+
 ];
 const downstack = [
   { logo: <FaReact />, name: "React", color: "#61DBFB" },
